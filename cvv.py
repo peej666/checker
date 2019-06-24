@@ -6,11 +6,11 @@ import gateway1, time, os
 def CODECHECKER():
     banner = """
     
-  {y}.---------[ {g}UPDATED BLOODHUB {y}]----------.
+  {y}.---------[ {g}STARTERS THE OTEN{y}]----------.
   {y}|  {r}- Stripe Gateway                      {y}|
   {y}|  {r}- CCN / CVV Checkers                  {y}|
   {y}'----------------------------------------'
-  {g}[1] {r} Gateway Default CCN / CVV (Good on Amazon/Ali Banned 5210 and 510)
+  {g}[1] {r} Gateway Default CCN / CVV (Good on Amazon/Ali)
   
   """.format(g=Fore.GREEN, r=Fore.LIGHTRED_EX, y=Fore.YELLOW)
     print(banner)
