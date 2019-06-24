@@ -6,9 +6,9 @@ import gateway1, time, os
 def CODECHECKER():
     banner = """
     
-  {y}.---------[ {g}STARTERS THE OTEN{y}]----------.
-  {y}|  {r}- Stripe Gateway                      {y}|
-  {y}|  {r}- CCN / CVV Checkers                  {y}|
+  {y}.---------[{g}     STARTERS    {y}]------.
+  {y}|  {r}- CCN / CVV Checkers            {y}|
+  {y}|  {r}- OTEN / BELAT / IYOT Gateway   {y}|
   {y}'----------------------------------------'
   {g}[1] {r} Gateway Default CCN / CVV (Good on Amazon/Ali)
   
@@ -27,7 +27,7 @@ def CODECHECKER():
             print()
             print("""
         {re}             {g}______________{re}
-        {re}-------{g}|- {r}STRIPE GATEWAY 1 -{g}|{re}------------
+        {re}-------{g}|- {r}OTEN GATEWAY 1 -{g}|{re}------------
         """.format(g=Fore.GREEN, r=Fore.RED, re=Fore.RESET))
             ranges = []
             try:
@@ -35,7 +35,7 @@ def CODECHECKER():
                     for x in ccs.read().split('\n'):
                         ranges.append(x)
                 print(Fore.YELLOW + "[*] " + Fore.RESET + 'Checking ' + str(len(ranges)) + ' Credit Cards.')
-                input(Fore.RESET + "PRESS ANY KEY TO CONTINUE")
+                input(Fore.RESET + "PRESS ANY OTEN TO CONTINUE")
                 print(Fore.BLUE + "Start Checking at " + str(time.ctime()))
                 print(Fore.RESET)
                 
