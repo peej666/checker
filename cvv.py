@@ -12,7 +12,7 @@ import gateway1, os
 def Main():
     banner = """
     
-  {y}//-------BloodHub Premium Chk-------//
+  {y}//-------Juses Stripe Chk-------//
   {y}//---------Python Based v3---------//
   
   """.format(g=Fore.GREEN, r=Fore.LIGHTRED_EX, y=Fore.YELLOW)
@@ -30,9 +30,9 @@ def Main():
             print()
             print("""
 {re}      {ly}________________________________________________{re}
-{re}     {ly}//----------{y}BloodHub Stripe Gate1{ly}--------------//{re}
+{re}     {ly}//----------{y}Stripe Gateway{ly}--------------//{re}
 {re}    {ly}//---------------{y}Termux Based v3{ly}---------------//{re}
-{re}   {ly}//-------{r}Contact @BH_Adminn for checker{ly}--------//{re}
+{re}   {ly}//-------{r}Contact @Derp666{ly}--------//{re}
 {re}  {ly}================================================ {re}
 			""".format(ly=Fore.GREEN, g=Fore.GREEN, y=Fore.YELLOW, r=Fore.RED, re=Fore.RESET))
             ranges = []
@@ -57,7 +57,7 @@ def Main():
                 for x in credit_cards.split('\n'):
                     ccEntry += 1
                     try:
-                        gateway1.StripeAutomate(x, ccEntry, 'Samsoden', "Smith")
+                        gateway1.StripeAutomate(x, ccEntry, 'Jems', "Arno")
                     except KeyboardInterrupt:
                         break
             except KeyboardInterrupt:
